@@ -1,25 +1,25 @@
 import logo from "../../assets/svgviewer-png-output.png";
 import { CiSearch } from "react-icons/ci";
 import { IoBagHandleOutline } from "react-icons/io5";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const navbar = (
   <>
     <div className="flex text-lg font-semibold text-[#444444]">
       <li>
-        <NavLink to="/">Home</NavLink>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <NavLink to="/about">About</NavLink>
+        <Link to="/about">About</Link>
       </li>
       <li>
-        <NavLink to="/services">Services</NavLink>
+        <Link to="/services">Services</Link>
       </li>
       <li>
-        <NavLink to="/blog">Blog</NavLink>
+        <Link to="/blog">Blog</Link>
       </li>
       <li>
-        <NavLink to="/contact">Contact</NavLink>
+        <Link to="/contact">Contact</Link>
       </li>
     </div>
   </>
@@ -27,7 +27,7 @@ const navbar = (
 
 const Navbar = () => {
   return (
-    <div className="">
+    <div className=" container mx-auto px-14 bg-white">
       <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">

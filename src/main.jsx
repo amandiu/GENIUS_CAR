@@ -7,13 +7,15 @@ import About from "./Components/About/About";
 import Services from "./Components/Service/Services";
 import Contact from "./Components/Contact/Contact";
 import Blog from "./Components/Blog/Blog";
+import Root from "./Components/Root/Root";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Root />,
     errorElement: "error",
     children: [
+      { path: "/", element: <Home /> },
       { path: "/about", element: <About /> },
       { path: "/services", element: <Services /> },
       { path: "/blog", element: <Blog /> },

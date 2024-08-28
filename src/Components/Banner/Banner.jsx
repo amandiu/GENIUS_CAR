@@ -3,13 +3,13 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const Banner = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto py-3">
       <div
-        className="rounded-lg  hero h-[450px]"
+        className="rounded-lg  hero h-[450px] w-auto"
         style={{
           borderRadius: "15px",
           backgroundImage:
-            "url(https://as2.ftcdn.net/v2/jpg/03/08/44/53/1000_F_308445331_ZZinysRse5xOZacNTnoQqG24TAy7ftZ5.jpg)",
+            "url(https://t3.ftcdn.net/jpg/04/60/44/42/360_F_460444211_E7j3njYE705Rk1guKz9LKh58gFgiTybV.jpg)",
         }}
       >
         <div className="hero-overlay bg-opacity-60  rounded-xl"></div>

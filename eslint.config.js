@@ -19,6 +19,8 @@ export default [
     },
     settings: { react: { version: '18.3' } },
     plugins: {
+      // eslint-disable-next-line no-undef
+      env: node - true,
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
