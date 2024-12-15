@@ -1,3 +1,9 @@
+Figma Link: https://www.figma.com/design/Y7fpyaNfw1jYDOCT47CP2F/genius_car?node-id=1-2
+
+![Car Doctor 1](https://github.com/user-attachments/assets/24f4f033-2c34-4313-b7e2-1dbb8626293c)
+![Car Doctor 2](https://github.com/user-attachments/assets/f2133f8a-d591-4ecd-a4c1-f0d723c51606)
+
+
 # 🚗 GENIUS_CAR
 
 Welcome to **GENIUS_CAR**, a React.js-powered web application for car services and management. This project allows users to explore, manage, and interact with various car-related services, making car management a breeze.
