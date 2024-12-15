@@ -8,15 +8,21 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { FaTwitterSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
+import Clock from "../../assets/clock.png";
 import phone from "../../assets/phone.png";
 import teitter from "../../assets/twitter.png";
 import location from "../../assets/placeholder.png";
+import Delivery from "../../assets/Delivery.png";
+import Guranty from "../../assets/Guranty.png";
+import Hours from "../../assets/Group.png";
 import linkedin from "../../assets/linkedin.png";
 import team1 from "../../assets/Team/a21464b852f0428fa73ef175786dc9e7.jpeg";
 import team2 from "../../assets/Team/two-girls-mechanics-fixing-automobile_7502-4402.jpg";
 import team3 from "../../assets/Team/GettyImages-522272311-5949bdc15f9b58d58a035319.jpg";
 import team4 from "../../assets/Team/attractive-girl-short-shorts-top-260nw-1028862829.jpg";
 import Card from "../Card/Card";
+import LeaderShip from "../../assets/leadership.png";
+import Wrench from "../../assets/Wrench.png";
 import Carousel from "react-multi-carousel";
 import facebook from "../../assets/facebook.png";
 import Slider from "react-slick";
@@ -29,7 +35,7 @@ const Services = () => {
   const settings = {
     infinite: false,
     speed: 500,
-    slidesToShow: 6,
+    slidesToShow: 5,
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
@@ -60,7 +66,7 @@ const Services = () => {
   };
 
   return (
-    <div>
+    <div className="bg-white">
       {/* Service Section */}
       <section>
         <div className="container mx-auto">
@@ -78,7 +84,7 @@ const Services = () => {
                 Believable.
               </p>
             </div>
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-4 text-center gap-1">
               <Card></Card>
               <Card></Card>
               <Card></Card>
@@ -88,10 +94,10 @@ const Services = () => {
               <Card></Card>
               <Card></Card>
             </div>
-            <div className="text-center">
+            <div className="text-center mt-10">
               <a
                 href="/"
-                className="bg-white mt-12 mb-3 font-semibold text-lg text-[#FF3811] border px-4 py-2 border-[#FF3811]"
+                className="bg-white font-semibold text-lg text-[#FF3811] border px-4 py-2 border-[#FF3811]"
               >
                 More Products
               </a>
@@ -101,7 +107,8 @@ const Services = () => {
       </section>
       {/* Status Section */}
       <section>
-        <div className=" container mt-10 rounded  mx-auto bg-[#151515]">
+       <div className="px-10">
+       <div className=" container rounded  mx-auto bg-[#151515]">
           <div className=" items-center py-14 justify-around  flex  lg:grid-cols-3">
             <div className="flex items-center">
               <div>
@@ -160,6 +167,7 @@ const Services = () => {
             </div>
           </div>
         </div>
+       </div>
       </section>
       {/* Popular Products Section */}
       <section>
@@ -611,7 +619,7 @@ const Services = () => {
                 href="/"
                 className="bg-white mt-12 mb-3 font-semibold text-lg text-[#FF3811] border px-4 py-2 border-[#FF3811]"
               >
-                More Products
+                More Services
               </a>
             </div>
           </div>
@@ -619,7 +627,7 @@ const Services = () => {
       </section>
       {/* Our Team Section Start*/};{/* Our team section end */}
       <section>
-        <div className="py-16 container mx-auto">
+        <div className="py-10 mt-[-40px] container mx-auto">
           <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
             <div>
               <p className="text-[#FF3811] font-bold text-xl">Team</p>
@@ -635,217 +643,268 @@ const Services = () => {
           </div>
           <div className="slider-container py-1 px-8 rounded bg-black">
             <Slider {...settings}>
-              <div className="bg-red-400 ">
-              <div className=" bg-white flex-col w-[230px]  border rounded-md py-2 flex  items-center ">
-                <img
-                  className="rounded h-[200px]"
-                  src={team1}
-                  alt="Pizza"
-                />
-                <div className="flex flex-col items-center">
-                  <h1 className="text-[#444444] mt-1 text-2xl font-bold">
-                    Car Engine Plug
-                  </h1>
-                  <p className="text-[#444444] mt-1 text-xl font-semibold">
-                    Engine Expert
-                  </p>
-                  <div className="flex gap-4  text-xl mt-3">
-                    <img src={facebook} alt="" className="h-8 w-8" />
-                    <img src={teitter} alt="" className="h-8 w-8" />
-                    <img src={linkedin} alt="" className="h-8 w-8" />
-                    <img src={instagram} alt="" className="h-8 w-8" />
+              <div>
+                <div className=" bg-white flex-col w-[260px]  border rounded-md py-2 flex  items-center ">
+                  <img
+                    className="rounded h-[200px] w-[240px]"
+                    src={team1}
+                    alt="Pizza"
+                  />
+                  <div className="flex flex-col items-center">
+                    <h1 className="text-[#444444] mt-1 text-2xl font-bold">
+                      Car Engine Plug
+                    </h1>
+                    <p className="text-[#444444] mt-1 text-xl font-semibold">
+                      Engine Expert
+                    </p>
+                    <div className="flex gap-4  text-xl mt-3">
+                      <img src={facebook} alt="" className="h-8 w-8" />
+                      <img src={teitter} alt="" className="h-8 w-8" />
+                      <img src={linkedin} alt="" className="h-8 w-8" />
+                      <img src={instagram} alt="" className="h-8 w-8" />
+                    </div>
                   </div>
                 </div>
               </div>
-              </div>
-              <div className="bg-red-400 ">
-              <div className=" bg-white flex-col w-[230px]  border rounded-md py-2 flex  items-center ">
-                <img
-                  className="rounded h-[200px]"
-                  src={team1}
-                  alt="Pizza"
-                />
-                <div className="flex flex-col items-center">
-                  <h1 className="text-[#444444] mt-1 text-2xl font-bold">
-                    Car Engine Plug
-                  </h1>
-                  <p className="text-[#444444] mt-1 text-xl font-semibold">
-                    Engine Expert
-                  </p>
-                  <div className="flex gap-4  text-xl mt-3">
-                    <img src={facebook} alt="" className="h-8 w-8" />
-                    <img src={teitter} alt="" className="h-8 w-8" />
-                    <img src={linkedin} alt="" className="h-8 w-8" />
-                    <img src={instagram} alt="" className="h-8 w-8" />
+              <div>
+                <div className=" bg-white flex-col w-[260px]  border rounded-md py-2 flex  items-center ">
+                  <img
+                    className="rounded h-[200px] w-[240px]"
+                    src={team1}
+                    alt="Pizza"
+                  />
+                  <div className="flex flex-col items-center">
+                    <h1 className="text-[#444444] mt-1 text-2xl font-bold">
+                      Car Engine Plug
+                    </h1>
+                    <p className="text-[#444444] mt-1 text-xl font-semibold">
+                      Engine Expert
+                    </p>
+                    <div className="flex gap-4  text-xl mt-3">
+                      <img src={facebook} alt="" className="h-8 w-8" />
+                      <img src={teitter} alt="" className="h-8 w-8" />
+                      <img src={linkedin} alt="" className="h-8 w-8" />
+                      <img src={instagram} alt="" className="h-8 w-8" />
+                    </div>
                   </div>
                 </div>
               </div>
-              </div>
-              <div className="bg-red-400 ">
-              <div className=" bg-white flex-col w-[230px]  border rounded-md py-2 flex  items-center ">
-                <img
-                  className="rounded h-[200px]"
-                  src={team1}
-                  alt="Pizza"
-                />
-                <div className="flex flex-col items-center">
-                  <h1 className="text-[#444444] mt-1 text-2xl font-bold">
-                    Car Engine Plug
-                  </h1>
-                  <p className="text-[#444444] mt-1 text-xl font-semibold">
-                    Engine Expert
-                  </p>
-                  <div className="flex gap-4  text-xl mt-3">
-                    <img src={facebook} alt="" className="h-8 w-8" />
-                    <img src={teitter} alt="" className="h-8 w-8" />
-                    <img src={linkedin} alt="" className="h-8 w-8" />
-                    <img src={instagram} alt="" className="h-8 w-8" />
+              <div>
+                <div className=" bg-white flex-col w-[260px]  border rounded-md py-2 flex  items-center ">
+                  <img
+                    className="rounded h-[200px] w-[240px]"
+                    src={team1}
+                    alt="Pizza"
+                  />
+                  <div className="flex flex-col items-center">
+                    <h1 className="text-[#444444] mt-1 text-2xl font-bold">
+                      Car Engine Plug
+                    </h1>
+                    <p className="text-[#444444] mt-1 text-xl font-semibold">
+                      Engine Expert
+                    </p>
+                    <div className="flex gap-4  text-xl mt-3">
+                      <img src={facebook} alt="" className="h-8 w-8" />
+                      <img src={teitter} alt="" className="h-8 w-8" />
+                      <img src={linkedin} alt="" className="h-8 w-8" />
+                      <img src={instagram} alt="" className="h-8 w-8" />
+                    </div>
                   </div>
                 </div>
               </div>
-              </div>
-              <div className="bg-red-400 ">
-              <div className=" bg-white flex-col w-[230px]  border rounded-md py-2 flex  items-center ">
-                <img
-                  className="rounded h-[200px]"
-                  src={team1}
-                  alt="Pizza"
-                />
-                <div className="flex flex-col items-center">
-                  <h1 className="text-[#444444] mt-1 text-2xl font-bold">
-                    Car Engine Plug
-                  </h1>
-                  <p className="text-[#444444] mt-1 text-xl font-semibold">
-                    Engine Expert
-                  </p>
-                  <div className="flex gap-4  text-xl mt-3">
-                    <img src={facebook} alt="" className="h-8 w-8" />
-                    <img src={teitter} alt="" className="h-8 w-8" />
-                    <img src={linkedin} alt="" className="h-8 w-8" />
-                    <img src={instagram} alt="" className="h-8 w-8" />
+              <div>
+                <div className=" bg-white flex-col w-[260px]  border rounded-md py-2 flex  items-center ">
+                  <img
+                    className="rounded h-[200px] w-[240px]"
+                    src={team1}
+                    alt="Pizza"
+                  />
+                  <div className="flex flex-col items-center">
+                    <h1 className="text-[#444444] mt-1 text-2xl font-bold">
+                      Car Engine Plug
+                    </h1>
+                    <p className="text-[#444444] mt-1 text-xl font-semibold">
+                      Engine Expert
+                    </p>
+                    <div className="flex gap-4  text-xl mt-3">
+                      <img src={facebook} alt="" className="h-8 w-8" />
+                      <img src={teitter} alt="" className="h-8 w-8" />
+                      <img src={linkedin} alt="" className="h-8 w-8" />
+                      <img src={instagram} alt="" className="h-8 w-8" />
+                    </div>
                   </div>
                 </div>
               </div>
-              </div>
-              <div className="bg-red-400 ">
-              <div className=" bg-white flex-col w-[230px]  border rounded-md py-2 flex  items-center ">
-                <img
-                  className="rounded h-[200px]"
-                  src={team1}
-                  alt="Pizza"
-                />
-                <div className="flex flex-col items-center">
-                  <h1 className="text-[#444444] mt-1 text-2xl font-bold">
-                    Car Engine Plug
-                  </h1>
-                  <p className="text-[#444444] mt-1 text-xl font-semibold">
-                    Engine Expert
-                  </p>
-                  <div className="flex gap-4  text-xl mt-3">
-                    <img src={facebook} alt="" className="h-8 w-8" />
-                    <img src={teitter} alt="" className="h-8 w-8" />
-                    <img src={linkedin} alt="" className="h-8 w-8" />
-                    <img src={instagram} alt="" className="h-8 w-8" />
+              <div>
+                <div className=" bg-white flex-col w-[260px]  border rounded-md py-2 flex  items-center ">
+                  <img
+                    className="rounded h-[200px] w-[240px]"
+                    src={team1}
+                    alt="Pizza"
+                  />
+                  <div className="flex flex-col items-center">
+                    <h1 className="text-[#444444] mt-1 text-2xl font-bold">
+                      Car Engine Plug
+                    </h1>
+                    <p className="text-[#444444] mt-1 text-xl font-semibold">
+                      Engine Expert
+                    </p>
+                    <div className="flex gap-4  text-xl mt-3">
+                      <img src={facebook} alt="" className="h-8 w-8" />
+                      <img src={teitter} alt="" className="h-8 w-8" />
+                      <img src={linkedin} alt="" className="h-8 w-8" />
+                      <img src={instagram} alt="" className="h-8 w-8" />
+                    </div>
                   </div>
                 </div>
               </div>
-              </div>
-              <div className="bg-red-400 ">
-              <div className=" bg-white flex-col w-[230px]  border rounded-md py-2 flex  items-center ">
-                <img
-                  className="rounded h-[200px]"
-                  src={team1}
-                  alt="Pizza"
-                />
-                <div className="flex flex-col items-center">
-                  <h1 className="text-[#444444] mt-1 text-2xl font-bold">
-                    Car Engine Plug
-                  </h1>
-                  <p className="text-[#444444] mt-1 text-xl font-semibold">
-                    Engine Expert
-                  </p>
-                  <div className="flex gap-4  text-xl mt-3">
-                    <img src={facebook} alt="" className="h-8 w-8" />
-                    <img src={teitter} alt="" className="h-8 w-8" />
-                    <img src={linkedin} alt="" className="h-8 w-8" />
-                    <img src={instagram} alt="" className="h-8 w-8" />
+              <div>
+                <div className=" bg-white flex-col w-[260px]  border rounded-md py-2 flex  items-center ">
+                  <img
+                    className="rounded h-[200px] w-[240px]"
+                    src={team1}
+                    alt="Pizza"
+                  />
+                  <div className="flex flex-col items-center">
+                    <h1 className="text-[#444444] mt-1 text-2xl font-bold">
+                      Car Engine Plug
+                    </h1>
+                    <p className="text-[#444444] mt-1 text-xl font-semibold">
+                      Engine Expert
+                    </p>
+                    <div className="flex gap-4  text-xl mt-3">
+                      <img src={facebook} alt="" className="h-8 w-8" />
+                      <img src={teitter} alt="" className="h-8 w-8" />
+                      <img src={linkedin} alt="" className="h-8 w-8" />
+                      <img src={instagram} alt="" className="h-8 w-8" />
+                    </div>
                   </div>
                 </div>
               </div>
-              </div>
-              <div className="bg-red-400 ">
-              <div className=" bg-white flex-col w-[230px]  border rounded-md py-2 flex  items-center ">
-                <img
-                  className="rounded h-[200px]"
-                  src={team1}
-                  alt="Pizza"
-                />
-                <div className="flex flex-col items-center">
-                  <h1 className="text-[#444444] mt-1 text-2xl font-bold">
-                    Car Engine Plug
-                  </h1>
-                  <p className="text-[#444444] mt-1 text-xl font-semibold">
-                    Engine Expert
-                  </p>
-                  <div className="flex gap-4  text-xl mt-3">
-                    <img src={facebook} alt="" className="h-8 w-8" />
-                    <img src={teitter} alt="" className="h-8 w-8" />
-                    <img src={linkedin} alt="" className="h-8 w-8" />
-                    <img src={instagram} alt="" className="h-8 w-8" />
+              <div>
+                <div className=" bg-white flex-col w-[260px]  border rounded-md py-2 flex  items-center ">
+                  <img
+                    className="rounded h-[200px] w-[240px]"
+                    src={team1}
+                    alt="Pizza"
+                  />
+                  <div className="flex flex-col items-center">
+                    <h1 className="text-[#444444] mt-1 text-2xl font-bold">
+                      Car Engine Plug
+                    </h1>
+                    <p className="text-[#444444] mt-1 text-xl font-semibold">
+                      Engine Expert
+                    </p>
+                    <div className="flex gap-4  text-xl mt-3">
+                      <img src={facebook} alt="" className="h-8 w-8" />
+                      <img src={teitter} alt="" className="h-8 w-8" />
+                      <img src={linkedin} alt="" className="h-8 w-8" />
+                      <img src={instagram} alt="" className="h-8 w-8" />
+                    </div>
                   </div>
                 </div>
               </div>
-              </div>
-              <div className="bg-red-400 ">
-              <div className=" bg-white flex-col w-[230px]  border rounded-md py-2 flex  items-center ">
-                <img
-                  className="rounded h-[200px]"
-                  src={team1}
-                  alt="Pizza"
-                />
-                <div className="flex flex-col items-center">
-                  <h1 className="text-[#444444] mt-1 text-2xl font-bold">
-                    Car Engine Plug
-                  </h1>
-                  <p className="text-[#444444] mt-1 text-xl font-semibold">
-                    Engine Expert
-                  </p>
-                  <div className="flex gap-4  text-xl mt-3">
-                    <img src={facebook} alt="" className="h-8 w-8" />
-                    <img src={teitter} alt="" className="h-8 w-8" />
-                    <img src={linkedin} alt="" className="h-8 w-8" />
-                    <img src={instagram} alt="" className="h-8 w-8" />
+              <div>
+                <div className=" bg-white flex-col w-[260px]  border rounded-md py-2 flex  items-center ">
+                  <img
+                    className="rounded h-[200px] w-[240px]"
+                    src={team1}
+                    alt="Pizza"
+                  />
+                  <div className="flex flex-col items-center">
+                    <h1 className="text-[#444444] mt-1 text-2xl font-bold">
+                      Car Engine Plug
+                    </h1>
+                    <p className="text-[#444444] mt-1 text-xl font-semibold">
+                      Engine Expert
+                    </p>
+                    <div className="flex gap-4  text-xl mt-3">
+                      <img src={facebook} alt="" className="h-8 w-8" />
+                      <img src={teitter} alt="" className="h-8 w-8" />
+                      <img src={linkedin} alt="" className="h-8 w-8" />
+                      <img src={instagram} alt="" className="h-8 w-8" />
+                    </div>
                   </div>
                 </div>
               </div>
-              </div>
-              <div className="bg-red-400 ">
-              <div className=" bg-white flex-col w-[230px]  border rounded-md py-2 flex  items-center ">
-                <img
-                  className="rounded h-[200px]"
-                  src={team1}
-                  alt="Pizza"
-                />
-                <div className="flex flex-col items-center">
-                  <h1 className="text-[#444444] mt-1 text-2xl font-bold">
-                    Car Engine Plug
-                  </h1>
-                  <p className="text-[#444444] mt-1 text-xl font-semibold">
-                    Engine Expert
-                  </p>
-                  <div className="flex gap-4  text-xl mt-3">
-                    <img src={facebook} alt="" className="h-8 w-8" />
-                    <img src={teitter} alt="" className="h-8 w-8" />
-                    <img src={linkedin} alt="" className="h-8 w-8" />
-                    <img src={instagram} alt="" className="h-8 w-8" />
-                  </div>
-                </div>
-              </div>
-              </div>
-              
             </Slider>
           </div>
         </div>
+      </section>
+      {/* Core Features */}
+      <section>
+        <div className="container mx-auto md:mx-auto px-4 sm:text-center  md:mb-12">
+          <div className="max-w-xl mt-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+            <div>
+              <p className="text-[#FF3811] font-bold text-xl">Core Features</p>
+            </div>
+            <h2 className="max-w-lg mb-6 mt-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+              Why Choose Us
+            </h2>
+            <p className=" mt-4 px-10 text-lg text-[#878787]">
+              The Majority Have Suffered Alteration In Some Form, By Injected
+              Humour, Or Randomised Words Which Don't Look Even Slightly
+              Believable.
+            </p>
+          </div>
+          <div className="mt-8 flex gap-10 justify-center py-4">
+            <div className="bg-white h-[200px] w-[200px] justify-center items-center flex flex-col rounded border">
+              <img
+                className="rounded h-[60px] w-[60px]"
+                src={LeaderShip}
+                alt="Pizza"
+              />
+              <p className="font-bold text-lg text-[#444444]">Expert Team</p>
+            </div>
+            <div className="bg-[#FF3811] h-[200px] w-[200px] justify-center items-center flex flex-col rounded border">
+              <img
+                className="rounded h-[60px] w-[60px]"
+                src={Clock}
+                alt="Pizza"
+              />
+              <p className="font-bold text-lg text-[#ffffff]">
+                Timely Delivery
+              </p>
+            </div>
+            <div className="bg-white h-[200px] w-[200px] justify-center items-center flex flex-col rounded border">
+              <img
+                className="rounded h-[60px] w-[60px]"
+                src={Hours}
+                alt="Pizza"
+              />
+              <p className="font-bold text-lg text-[#444444]">24/7 Support</p>
+            </div>
+            <div className="bg-white h-[200px] w-[200px] justify-center items-center flex flex-col rounded border">
+              <img
+                className="rounded h-[60px] w-[60px]"
+                src={Wrench}
+                alt="Pizza"
+              />
+              <p className="font-bold text-lg text-[#444444]">Best Equipment</p>
+            </div>
+            <div className="bg-white h-[200px] w-[200px] justify-center items-center flex flex-col rounded border">
+              <img
+                className="rounded h-[80px] w-[60px]"
+                src={Guranty}
+                alt="Pizza"
+              />
+              <p className="font-bold text-lg text-[#444444]">100% Guranty</p>
+            </div>
+            <div className="bg-white h-[200px] w-[200px] justify-center items-center flex flex-col rounded border">
+              <img
+                className="rounded h-[80px] w-[60px]"
+                src={Delivery}
+                alt="Pizza"
+              />
+              <p className="font-bold text-lg text-[#444444]">
+                Timely Delivery
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="mt-10">
+        <p>asdfghj</p>
       </section>
     </div>
   );

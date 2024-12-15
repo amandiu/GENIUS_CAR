@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const Banner = () => {
   return (
-    <div className="container mx-auto py-3">
+    <div className="container mx-auto py-4 mt-4 px-2">
       <div
         className="rounded-lg  hero h-[450px] w-auto"
         style={{

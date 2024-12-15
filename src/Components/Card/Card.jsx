@@ -1,4 +1,5 @@
 import { FaArrowRightLong } from "react-icons/fa6";
+import image from "../../assets/1JktzC9GrA_l4yz0cCy8a5Q.jpg"
 
 const Card = () => {
   return (
@@ -11,9 +12,9 @@ const Card = () => {
         >
           <div className="flex flex-col p-2 border rounded-md">
             <img
-              src="https://images.autods.com/OfficialSite/New/20231009123226/20-Best-Selling-Auto-Parts-To-Start-Dropshipping-Today.png"
+              src={image}
               className="object-cover border rounded-lg w-full h-48"
-              alt=""
+              alt="#"
             />
             <div className="card-body ml-[-28px] mt-[-20px] flex">
               {/* Rating Section */}
@@ -21,7 +22,7 @@ const Card = () => {
                 Engine Diagnostics
               </p>
 
-              <div className="mb-[-30px] flex">
+              <div className="mb-[-30px] flex items-center">
                 <p className=" text-[#FF3811] text-lg font-semibold">
                   Price: $20:00
                 </p>
