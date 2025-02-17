@@ -1,15 +1,29 @@
 import React from "react";
 
-const HeadLine = ({ title, subTitle, paragraph }) => {
+const HeadLine = ({
+  className,
+  title,
+  subTitle,
+  paragraph,
+  extraStyle,
+  extraclass,
+}) => {
   return (
-    <div className="max-w-xl md:mx-auto text-center lg:max-w-2xl md:mb-12">
+    <div className={`${className}`}>
       <div>
-        <p className="text-[#FF3811] font-bold text-2xl lg:text-4xl">{title}</p>
+        <p className="text-[#FF3811] font-extrabold -mt-20 text-2xl lg:text-4xl">
+          {title}
+        </p>
       </div>
-      <h2 className="max-w-lg mb-6 mt-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+      <h2
+        className={`text-center mb-2 mt-2 font-sans text-3xl 
+          font-semibold text-gray-900 sm:text-4xl md:mx-auto ${extraStyle}`}
+      >
         {subTitle}
       </h2>
-      <p className="mt-4 px-10 text-lg text-[#878787]">{paragraph}</p>
+      <p className={`mt-4 text-lg mb-5 text-[#878787] ${extraStyle}`}>
+        {paragraph}
+      </p>
     </div>
   );
 };

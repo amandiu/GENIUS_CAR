@@ -1,5 +1,6 @@
 import React from "react";
 import { IoBagHandleOutline } from "react-icons/io5";
+import HeadLine from "../../../Shared/HeadLine/HeadLine";
 
 const Populerproducts = () => {
   return (
@@ -7,19 +8,14 @@ const Populerproducts = () => {
       <section className="px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="py-16">
-            <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-              <div>
-                <p className="text-[#FF3811] font-bold text-xl">Popular Products</p>
-              </div>
-              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-                Browse Our Products
-              </h2>
-              <p className="mt-4 text-lg text-[#878787]">
-                The Majority Have Suffered Alteration In Some Form, By Injected
+            <HeadLine
+              className="mt-16 md:mx-auto text-center lg:max-w-2xl md:mb-12"
+              title="Popular Products"
+              subTitle=" Browse Our Products"
+              paragraph={` The Majority Have Suffered Alteration In Some Form, By Injected
                 Humour, Or Randomised Words Which Don't Look Even Slightly
-                Believable.
-              </p>
-            </div>
+                Believable.`}
+            />
             <div className="grid gap-5 row-gap-5 mb-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               <a
                 href="/"
@@ -36,7 +32,10 @@ const Populerproducts = () => {
                     {/* Rating Section */}
                     <div className="rating flex space-x-1">
                       {[...Array(5)].map((_, index) => (
-                        <span key={index} className="mask mask-star bg-[#FF3811]"></span>
+                        <span
+                          key={index}
+                          className="mask mask-star bg-[#FF3811]"
+                        ></span>
                       ))}
                     </div>
                     <p className="text-xl font-bold text-[#444444] mt-2">

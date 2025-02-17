@@ -10,6 +10,7 @@ import team3 from "../../../assets/Team/GettyImages-522272311-5949bdc15f9b58d58a
 import team4 from "../../../assets/Team/attractive-girl-short-shorts-top-260nw-1028862829.jpg";
 import { MdNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
+import HeadLine from "../../../Shared/HeadLine/HeadLine";
 
 const NextArrow = (props) => {
   const { onClick } = props;
@@ -62,9 +63,9 @@ const settings = {
   infinite: true,
   speed: 500,
   slidesToShow: 3,
-  autoplay: true,  // autoplay is a boolean, no need to specify 3000 here. Use autoplaySpeed for the delay
+  autoplay: true, // autoplay is a boolean, no need to specify 3000 here. Use autoplaySpeed for the delay
   autoplaySpeed: 2000, // Add this for autoplay delay
-  nextArrow: <NextArrow />,  // Ensure the components are passed correctly
+  nextArrow: <NextArrow />, // Ensure the components are passed correctly
   prevArrow: <PrevArrow />,
   slidesToScroll: 1,
   responsive: [
@@ -88,21 +89,23 @@ const settings = {
 const OurTeam = () => {
   return (
     <section className="py-16 container mx-auto text-center bg-gradient-to-r from-blue-100 via-teal-200 to-pink-100 rounded-lg shadow-lg">
-      <p className="text-[#FF3811] font-bold text-xl mb-2">Team</p>
-      <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
-      <p className="text-lg text-[#444444] mt-4 max-w-xl mx-auto mb-6">
-        The Majority Have Suffered Alteration In Some Form, By Injected Humour,
-        Or Randomised Words Which Don't Look Even Slightly Believable.
-      </p>
+      <HeadLine
+        className={`mt-10`}
+        title="Team"
+        subTitle="Meet Our Team"
+        extraStyle={`lg:mx-40`}
+        paragraph={`The Majority Have Suffered Alteration In Some Form, By Injected Humour,
+        Or Randomised Words Which Don't Look Even Slightly Believable.`}
+      />
       <div className="slider-container px-4 mt-8">
-        <Slider {...settings} className="transition-all  duration-500">
+        <Slider {...settings} className="transition-all duration-500">
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="flex flex-col items-center bg-white border-2 border-[#FF3811] rounded-md py-3 px-2 m-4 transform hover:scale-105 transition-all duration-300 shadow-md"
+              className="flex flex-col items-center bg-white border-2 border-[#FF3811] rounded-md py-3 px-2 transform hover:scale-105 transition-all duration-300 shadow-md mx-2 mb-4"
             >
               <img
-                className=" h-[200px] w-full rounded-lg mb-4 shadow-lg"
+                className="h-[200px] w-full rounded-lg mb-4 shadow-lg"
                 src={member.img}
                 alt={member.name}
               />

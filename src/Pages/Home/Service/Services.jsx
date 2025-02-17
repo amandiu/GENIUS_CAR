@@ -10,19 +10,20 @@ import HeadLine from "../../../Shared/HeadLine/HeadLine";
 const Services = () => {
   // const [hovered, setHovered] = useState(false);
   return (
-    <div className="bg-white">
+    <div className="bg-white pt-32">
       {/* Service Section */}
       <section>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mb-20 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-16">
             <HeadLine
+              className="md:mx-auto text-center lg:max-w-2xl md:mb-12"
               title="Service"
               subTitle="Our Service Area"
               paragraph=" The Majority Have Suffered Alteration In Some Form, By Injected
                 Humour, Or Randomised Words Which Don't Look Even Slightly
                 Believable."
             />
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
               <Card title="Engine Diagnostics" image={image} price="20" />
               <Card title="Engine Diagnostics" image={image} price="30" />
               <Card title="Engine Diagnostics" image={image} price="40" />
@@ -35,9 +36,9 @@ const Services = () => {
           </div>
         </div>
       </section>
-      <section className="mt-10 px-4 sm:px-6 lg:px-8">
+      {/* <section className="mt-10 px-4 sm:px-6 lg:px-8">
         <p>Responsive content</p>
-      </section>
+      </section> */}
     </div>
   );
 };

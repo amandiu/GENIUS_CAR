@@ -15,12 +15,12 @@ const AnimatedButton = ({
   return (
     <div
       className={`text-center ${
-        extraClasses ? "m-0" : "mt-5"
+        extraClasses ? "m-0" : "lg:mt-5"
       } ${extraClasses}`}
     >
       <a
         href={href}
-        className={`relative inline-block px-6 py-3 text-lg font-semibold border-2 transition-all duration-300 
+        className={`relative inline-block px-6 lg:py-3 py-1 text-lg font-semibold border-2 transition-all duration-300 
           ${rounded ? "rounded-lg" : "rounded-md"} 
           ${hoverEffect ? "transform hover:scale-105" : ""}
           shadow-lg ${hovered ? "animate-pulse" : ""} ${extraClasses}`}
