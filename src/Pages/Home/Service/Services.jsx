@@ -32,7 +32,7 @@ const Services = () => {
               <Card title="Engine Diagnostics" image={image} price="30" />
               <Card title="Engine Diagnostics" image={image} price="60" />
             </div>
-            <AnimatedButton primaryColor="#ff3811" secondaryColor="black" />
+            <AnimatedButton extraClasses="mt-5 " primaryColor="#ff3811" secondaryColor="black" />
           </div>
         </div>
       </section>

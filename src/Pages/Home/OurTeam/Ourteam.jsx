@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Slider from "react-slick";
 import instagram from "../../../assets/instagram.png";
 import twitter from "../../../assets/twitter.png";
@@ -12,45 +12,23 @@ import { MdNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
 import HeadLine from "../../../Shared/HeadLine/HeadLine";
 
-const NextArrow = (props) => {
-  const { onClick } = props;
-  const [isClicked, setIsClicked] = useState(false);
+const NextArrow = ({ onClick }) => (
+  <div
+    className="absolute top-1/2 right-[-15px] transform -translate-y-1/2 cursor-pointer p-3 rounded-full shadow-lg bg-[#ff6411] hover:bg-[#FF3811] transition-all duration-300"
+    onClick={onClick}
+  >
+    <MdNavigateNext className="text-white text-xl" />
+  </div>
+);
 
-  return (
-    <div
-      className={`absolute top-1/2 right-[-30px] transform -translate-y-1/2 cursor-pointer p-3 rounded-full shadow-lg transition-all duration-300 ${
-        isClicked ? "bg-[#FF3811] scale-110" : "bg-[#ff6411] scale-100"
-      }`}
-      onClick={() => {
-        setIsClicked(true);
-        setTimeout(() => setIsClicked(false), 200);
-        onClick();
-      }}
-    >
-      <MdNavigateNext className="text-white text-xl" />
-    </div>
-  );
-};
-
-const PrevArrow = (props) => {
-  const { onClick } = props;
-  const [isClicked, setIsClicked] = useState(false);
-
-  return (
-    <div
-      className={`absolute top-1/2 left-[-30px] transform -translate-y-1/2 cursor-pointer p-3 rounded-full shadow-lg transition-all duration-300 ${
-        isClicked ? "bg-blue-600 scale-110" : "bg-[#FF3811] scale-100"
-      }`}
-      onClick={() => {
-        setIsClicked(true);
-        setTimeout(() => setIsClicked(false), 200);
-        onClick();
-      }}
-    >
-      <GrFormPrevious className="text-white text-xl" />
-    </div>
-  );
-};
+const PrevArrow = ({ onClick }) => (
+  <div
+    className="absolute z-10 top-1/2 left-[-15px] transform -translate-y-1/2 cursor-pointer p-3 rounded-full shadow-lg bg-[#FF3811] hover:bg-blue-600 transition-all duration-300"
+    onClick={onClick}
+  >
+    <GrFormPrevious className="text-white text-xl" />
+  </div>
+);
 
 const teamMembers = [
   { img: team1, name: "Car Engine Plug", role: "Engine Expert" },
@@ -59,83 +37,53 @@ const teamMembers = [
   { img: team4, name: "Tire Technician", role: "Wheel Expert" },
 ];
 
-const settings = {
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  autoplay: true, // autoplay is a boolean, no need to specify 3000 here. Use autoplaySpeed for the delay
-  autoplaySpeed: 2000, // Add this for autoplay delay
-  nextArrow: <NextArrow />, // Ensure the components are passed correctly
-  prevArrow: <PrevArrow />,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
+const OurTeam = ({ slidesToShow = 3 }) => {
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    nextArrow: <NextArrow />, 
+    prevArrow: <PrevArrow />,
+    slidesToScroll: 1,
+    responsive: [
+      { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+      { breakpoint: 600, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+    ],
+  };
 
-const OurTeam = () => {
   return (
-    <section className="py-16 container mx-auto text-center bg-gradient-to-r from-blue-100 via-teal-200 to-pink-100 rounded-lg shadow-lg">
+    <section className="py-16 shadow-[0px_4px_6px_rgba(128,0,128,0.3)] mb-10 container mx-auto text-center bg-gradient-to-r from-blue-100 via-teal-200 to-pink-100 rounded-lg sm:px-2">
       <HeadLine
-        className={`mt-10`}
+        className="mt-10"
         title="Team"
         subTitle="Meet Our Team"
-        extraStyle={`lg:mx-40`}
-        paragraph={`The Majority Have Suffered Alteration In Some Form, By Injected Humour,
-        Or Randomised Words Which Don't Look Even Slightly Believable.`}
+        extraStyle="lg:mx-40"
+        paragraph="The Majority Have Suffered Alteration In Some Form, By Injected Humour, Or Randomised Words Which Don't Look Even Slightly Believable."
       />
       <div className="slider-container px-4 mt-8">
         <Slider {...settings} className="transition-all duration-500">
           {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center bg-white border-2 border-[#FF3811] rounded-md py-3 px-2 transform hover:scale-105 transition-all duration-300 shadow-md mx-2 mb-4"
-            >
-              <img
-                className="h-[200px] w-full rounded-lg mb-4 shadow-lg"
-                src={member.img}
-                alt={member.name}
-              />
-              <h3 className="text-[#444444] mt-2 text-2xl font-bold mb-2">
-                {member.name}
-              </h3>
-              <p className="text-[#444444] text-xl font-semibold mb-3">
-                {member.role}
-              </p>
-              <div className="flex justify-center gap-4 mt-4 mb-2">
+            <div key={index} className="px-1">
+              <div className="flex flex-col items-center bg-white border-2 border-[#FF3811] rounded-md py-3 px-2 transform hover:scale-105 transition-all duration-300 shadow-md mb-4">
                 <img
-                  src={facebook}
-                  alt="Facebook"
-                  className="h-8 w-8 hover:scale-110 transition-all duration-300"
+                  className="h-[200px] w-full rounded-lg mb-4 shadow-lg"
+                  src={member.img}
+                  alt={member.name}
                 />
-                <img
-                  src={twitter}
-                  alt="Twitter"
-                  className="h-8 w-8 hover:scale-110 transition-all duration-300"
-                />
-                <img
-                  src={linkedin}
-                  alt="LinkedIn"
-                  className="h-8 w-8 hover:scale-110 transition-all duration-300"
-                />
-                <img
-                  src={instagram}
-                  alt="Instagram"
-                  className="h-8 w-8 hover:scale-110 transition-all duration-300"
-                />
+                <h3 className="text-[#444444] mt-2 text-2xl font-bold mb-2">{member.name}</h3>
+                <p className="text-[#444444] text-xl font-semibold mb-3">{member.role}</p>
+                <div className="flex justify-center gap-4 mt-4 mb-2">
+                  {[facebook, twitter, linkedin, instagram].map((icon, i) => (
+                    <img
+                      key={i}
+                      src={icon}
+                      alt="Social Icon"
+                      className="h-8 w-8 hover:scale-110 transition-all duration-300 shadow-md"
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           ))}

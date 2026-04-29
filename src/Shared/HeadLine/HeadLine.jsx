@@ -5,8 +5,7 @@ const HeadLine = ({
   title,
   subTitle,
   paragraph,
-  extraStyle,
-  extraclass,
+  extraStyle
 }) => {
   return (
     <div className={`${className}`}>

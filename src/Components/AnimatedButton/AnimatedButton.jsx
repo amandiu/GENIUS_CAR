@@ -28,7 +28,7 @@ const AnimatedButton = ({
           color: primaryColor,
           backgroundColor: secondaryColor,
           borderColor: primaryColor,
-        }}
+        }} 
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >

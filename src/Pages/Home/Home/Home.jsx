@@ -5,7 +5,7 @@ import Status from "../Status/Status";
 import Populerproducts from "../Popularproducts/Populerproducts";
 import Ourteam from "../OurTeam/Ourteam";
 import CoreFeatures from "../CoreFeatures/CoreFeatures";
-import TeamCarousel from "../TeamCarousel/TeamCarousel";
+import TestimonialCarousel from "../TestimonialCarousel/TestimonialCarousel";
 
 const Home = () => {
   return (
@@ -21,8 +21,7 @@ const Home = () => {
       <Ourteam />
       {/* Core Features */}
       <CoreFeatures />
-      {/* <TeamCarousel /> */}
-      <TeamCarousel />
+      <TestimonialCarousel/>
     </div>
   );
 };
